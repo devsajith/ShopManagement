@@ -1,4 +1,6 @@
+//Importing Mongoose
 const mongoose = require('mongoose');
+// Definig the schema for the User model 
 const userSchema =new mongoose.Schema({
     phone: {
         type: String,
@@ -33,4 +35,5 @@ const userSchema =new mongoose.Schema({
         required:true
     }
 })
+//Exporting the User model
 module.exports = mongoose.model('User',userSchema)

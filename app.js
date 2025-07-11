@@ -17,7 +17,9 @@ app.use(cors({ origin: "*" })); // Enables CORS for all origins
 
 // Routes
 const userRouter = require("./Routers/user");
+const itemRouter = require("./Routers/items")
 app.use(userRouter);
+app.use(itemRouter);
 
 // 404 Error Handling
 app.use((req,res) => {
@@ -25,6 +27,6 @@ app.use((req,res) => {
 });
 
 // Start Server
-const port = 3000;
+const port = 8000;
 app.listen(port, () => {
 });
